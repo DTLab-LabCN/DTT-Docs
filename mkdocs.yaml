@@ -1,0 +1,5 @@
+site_name: DTT Documentation
+site_url: https://docs.dtt.idlab.app
+nav:
+  - Home: index.md
+theme: readthedocs

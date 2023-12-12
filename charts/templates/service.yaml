@@ -1,0 +1,20 @@
+---
+{{- with .Values.docs }}
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ $.Values.namespace }}
+  name: "{{ .label }}"
+  annotations:
+    metallb.universe.tf/address-pool: loadbalanced
+spec:
+  type: LoadBalancer
+  allocateLoadBalancerNodePorts: true
+  loadBalancerIP: {{ .load_balancer_ip }}
+  selector:
+    app: "{{ .label }}"
+  ports:
+    - protocol: TCP
+      port: {{ .port }}
+      targetPort: {{ .port }}
+{{- end }}

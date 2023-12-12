@@ -1,0 +1,7 @@
+apiVersion: v2
+name: dtt-docs
+description: A Helm chart for DTT Documentation
+type: application
+version: 0.0.1
+
+appVersion: "v0.0.1"

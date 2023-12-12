@@ -1,0 +1,28 @@
+---
+{{- with .Values.docs }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: {{ $.Values.namespace }}
+  name: "{{ .label }}"
+  labels:
+    app: "{{ .label }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "{{ .label }}"
+  template:
+    metadata:
+      labels:
+        app: "{{ .label }}"
+    spec:
+      containers:
+        - name: "{{ .label }}"
+          image: "{{ .image }}:{{ .tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{ .port }}
+      imagePullSecrets:
+      - name: regcred
+{{- end }}

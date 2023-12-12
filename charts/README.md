@@ -6,14 +6,14 @@ docker push idlaborg/dtt-docs:$tag
 cd charts
 kinterop
 helm upgrade dtt-docs . \
-    --namespace dtt-dev \
+    --namespace dtt-app \
     --create-namespace --install
 cd ..
 
 ```
 ```
 helm upgrade dtt-docs . \
-    --namespace dtt-dev \
+    --namespace dtt-app \
     --create-namespace --install
 
 ```

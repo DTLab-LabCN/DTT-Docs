@@ -7,7 +7,7 @@ app:
   endpoint: docs
   expose: False
   image: idlaborg/dtt-docs
-  #tag: "0.0.1"
+  tag: "0.0.1"
   port: 80
   targetPort: 8080
   load_balancer_ip: 10.0.20.226

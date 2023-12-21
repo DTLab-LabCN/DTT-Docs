@@ -61,7 +61,7 @@ jobs:
         run: helm lint ./charts/
       - name: Deploy
         run: |
-          helm upgrade --install --atomic --timeout 2m \
+          helm upgrade --install \
             dtt-docs ./charts/ -f ./charts/values.yaml \
             --namespace dtt-app --create-namespace \
             --set deployment.image.tag=dev-${{ github.run_id }} \

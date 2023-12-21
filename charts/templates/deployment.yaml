@@ -4,23 +4,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: {{ $.Values.namespace }}
-  name: {{ .name }}
+  name: {{ $.Values.app_name }}
   labels:
-    app: {{ .name }}
+    app: {{ $.Values.app_name }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .name }}
+      app: {{ $.Values.app_name }}
   template:
     metadata:
       labels:
-        app: {{ .name }}
+        app: {{ $.Values.app_name }}
     spec:
       imagePullSecrets:
       - name: regcred
       containers:
-        - name: {{ .name }}
+        - name: {{ $.Values.app_name }}
           image: "{{ .image }}:{{ .tag }}"
           imagePullPolicy: Always
           ports:

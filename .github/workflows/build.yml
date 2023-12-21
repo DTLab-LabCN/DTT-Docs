@@ -64,8 +64,7 @@ jobs:
           helm upgrade --install \
             dtt-docs ./charts/ -f ./charts/values.yaml \
             --namespace dtt-app --create-namespace \
-            --set deployment.image.tag=dev-${{ github.run_id }} \
-            --set environment.variables.VERSION=dev-${{ github.run_id }} \
+            --set deployment.image.tag=dev-${{ github.run_id }}
       - name: Update deployment status
         uses: chrnorm/deployment-status@v2
         if: always()

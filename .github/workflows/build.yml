@@ -3,7 +3,7 @@ name: dtt-dev
 on:
   push:
     branches:
-      - "master"
+      - "main"
       - "DTT-*"
   
 env:

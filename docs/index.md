@@ -5,7 +5,6 @@
 ##Introduction
 **Digital Trust Test Bench (DTT)** is a quality assurance tool for digital credential solutions, allowing governments and organizations to put digital credentials to the test to make sure they work with other platforms.
 
-This platform is still in development. As of 2023-12-21 - Afternoon
 
 ## Summary of Documentation
 * [User guide](userguide/ug_intro.md)

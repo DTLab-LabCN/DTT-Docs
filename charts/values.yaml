@@ -18,6 +18,7 @@ service:
   # Metallb assigned address
   load_balancer_ip: 10.0.20.226
   port: 8080
+  targetPort: 8080
 
 # Ingress for app endpoint
 ingress:

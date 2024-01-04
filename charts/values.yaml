@@ -1,13 +1,26 @@
 ---
-namespace: "dtt-app"
-# domain: "dtt.idlab.app"
+# Namespace where this application is deployed
+namespace: dtt-app
 
-app:
-  name: dtt-docs
-  endpoint: docs
-  expose: False
-  image: idlaborg/dtt-docs
-  tag: "0.0.1"
-  port: 80
-  targetPort: 8080
+# Name of the application
+app_name: dtt-docs
+
+# Deployment configuration for the application
+deployment:
+  # Docker image name & tag (tag is overwritten during pipeline)
+  image: 
+    name: idlaborg/dtt-docs
+    tag: change_me
+  port: 8080
+
+# Service configuration for the application
+service:
+  # Metallb assigned address
   load_balancer_ip: 10.0.20.226
+  port: 8080
+  targetPort: 8080
+
+# Ingress for app endpoint
+ingress:
+  domain: dtt-dev.idlab.app
+  subdomain: docs

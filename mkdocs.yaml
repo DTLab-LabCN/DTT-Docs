@@ -1,5 +1,14 @@
 site_name: DTT Documentation
 site_url: https://docs.dtt.idlab.app
+dev_addr: localhost:8080
 nav:
-  - Home: index.md
-theme: readthedocs
+  - "Home": 'index.md'
+  - "User Guide": 
+    - "Introduction" : 'userguide/ug_intro.md'
+    - "Getting Started": 'userguide/ug_getting_started.md'
+    - "Test Suites":
+      - "Data Model": 'userguide/data_model.md'
+  - "Developer Guide" : 
+    - "Introduction" : 'developerguide/dg_intro.md'
+    - "The DTT API" : 'developerguide/dg_dtt_api.md'
+theme: readthedocs 

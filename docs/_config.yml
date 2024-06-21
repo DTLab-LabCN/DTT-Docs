@@ -1,4 +1,0 @@
-# This is the configuration file for GH pages for the DTT documentations site
-remote_theme: Bilal2453/cayman-docs
-title: Digital Trust Test Bench (DTT) 
-description: DTT is a QA tool for digital credential solutions

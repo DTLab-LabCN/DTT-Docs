@@ -1,4 +1,8 @@
-# Digital Trust Testbench (DTT) - Developer Guide
+---
+sidebar_position: 1
+---
+
+# Introduction
 
 Content here
 

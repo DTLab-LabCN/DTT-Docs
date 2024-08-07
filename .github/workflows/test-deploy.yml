@@ -1,0 +1,39 @@
+name: Test deployment
+# This just runs the build step, without deploying, so you know that your PR will at least build
+# Will it look good ? You need to deploy to know...
+
+# Review gh actions docs if you want to further define triggers, paths, etc
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  DTT_DOCS_URL: ${{ vars.DTT_DOCS_URL }}
+  DTT_DOCS_BASE_PATH: ${{ vars.DTT_DOCS_BASE_PATH }}
+  ORGANIZATION_NAME: ${{ github.repository_owner }}
+  PROJECT_NAME: ${{ github.event.repository.name }}
+
+jobs:
+  test-build:
+    name: Test building the documentation static web site with docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # - name: list environment variables
+      #   run: |
+      #     env && exit 1
+
+      - name: Test build website
+        run: npm run build

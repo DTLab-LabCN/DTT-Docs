@@ -7,6 +7,12 @@ on:
     branches:
       - main
 
+env:
+  DTT_DOCS_URL: ${{ vars.DTT_DOCS_URL }}
+  DTT_DOCS_BASE_PATH: ${{ vars.DTT_DOCS_BASE_PATH }}
+  ORGANIZATION_NAME: ${{ github.repository_owner }}
+  PROJECT_NAME: ${{ github.event.repository.name }}
+
 jobs:
   build:
     name: Building the documentation static web site with docusaurus

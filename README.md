@@ -42,4 +42,21 @@ And if everything goes even better, your favorite web browser should open the re
 
 ### 2 - Testing this directly on the documentation staging web site
 
-_\<TODO\>_
+#### a The _I want to be a team player_ way
+
+1. You need to clone this repository
+2. You then need to create a branch, preferably directly from the [jira issue](https://dtlab-labcn.atlassian.net/jira/software/projects/DTT/boards/16) itself
+3. Do the required work, and create a pull request, which will at least trigger a test build for your branch each time you push a new commit to your working branch
+4. Merge the pull request to the **`main`** branch **NOT** ~~`gh-pages`~~. This is going to automatically update the `gh-pages` branch, if the automatic action is successful
+
+#### b The _YOLO_ way
+
+1. You need to clone this repository
+2. Checkout the `main` branch, and directly push commits to it. It's just the staging site, after all
+3. Be prepared to deal with possible team players complaints, merge, etc.
+
+## Updating the production documentation
+
+⚠️ check with Bruno for the fist time, this has not been tested yet ⚠️
+
+Once the `main` branch is OK in this staging repository, create a pull request going directly to the `DTT-Docs` repository.

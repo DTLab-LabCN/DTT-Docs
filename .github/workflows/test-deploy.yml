@@ -36,4 +36,10 @@ jobs:
       #     env && exit 1
 
       - name: Test build website
-        run: npm run build
+        # We also create the CNAME file, this is useless in staging,
+        # but required in production.
+        # It is created temporarily in the static/ folder, because
+        # docusaurus will copy it to /build
+        run: |
+          echo "$DTT_DOCS_URL" | cut -f 3 -d/ | tee static/CNAME
+          npm run build

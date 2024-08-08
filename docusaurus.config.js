@@ -89,7 +89,7 @@ const config = {
       },
       footer: {
         style: 'light',
-        copyright: `Copyright © ${new Date().getFullYear()} DTLAb, Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} DTLab.`,
       },
       prism: {
         theme: prismThemes.github,

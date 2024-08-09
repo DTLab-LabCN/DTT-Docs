@@ -12,6 +12,5 @@ sidebar_position: 1
 
 
 ## Summary of Documentation
-* [User guide](userguide/ug_intro.md)
-* [Developer guide](developerguide/dg_intro.md)
+**_TO-DO_**: update summary of documentation below
 

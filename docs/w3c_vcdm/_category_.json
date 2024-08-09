@@ -1,0 +1,8 @@
+{
+  "label": "W3C Verifiable Credential testing",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Testing W3C Verifiable Credentials (VCs) with DTT."
+  }
+}

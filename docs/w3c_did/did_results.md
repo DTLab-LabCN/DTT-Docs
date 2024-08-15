@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Test results
@@ -7,7 +7,6 @@ sidebar_position: 5
 ## How to inspect and understand your test results {#how-to-inspect-and-understand-your-test-results}
 
 **_TO-DO_**: plain English overview of results, maybe in the form of a simple checklist?
-
 
 ## Common errors and their meaning {#common-errors-and-their-meaning}
 

@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Introduction to API endpoint testing with DTT {#introduction-to-api-endpoint-testing-with-dtt}
+# Introduction to mDL testing with DTT {#introduction-to-mdl-testing-with-dtt}
 
-**_TODO_**: Focus on core VC capabilities: issue, verify, revoke. The objective is to help understand the interop capabilities of a specific endpoint by analyzing the interactions between this test suite and that endpoint.
+**_TODO_**: Focus on 18013-5 and mDL retrieval via BLE device engagement between web app and mobile device.

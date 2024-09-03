@@ -1,0 +1,8 @@
+{
+  "label": "W3C DID testing",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Testing W3C Decentralized Idenfitiers (DIDs) with DTT."
+  }
+}

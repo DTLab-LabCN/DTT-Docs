@@ -1,82 +1,62 @@
-# Digital-Trust-Test-Bench
-# DTT Documentation
+# DTT-Docs How-To
 
-## Understanding MkDocs
+If you are searching for the production DTT documentation, go to [https://dtt.docs.dtlab-labcn.app]
 
-DTT makes use of the MkDocs engine to format and present documentation to the user.
+## Updating the documentation
 
-Visit https://www.mkdocs.org/ to understand how MKDocs works and the details of the Markdown language.
+The [docs](./docs) directory is most probably where you want to do modifications, unless you want to modify docusaurus site-generation behavior itself ([docusaurus reference here](https://docusaurus.io/docs)).
 
+Updating the documentation then consists in updating or adding an md file in the relevant directory.
+If you are using a [serious editor](https://code.visualstudio.com/) you can have immediate feedback on your modification by using the preview feature.
 
+Now, if you really want to get a preview of the end product, they are two ways:
 
-Upon github commits in this repo,  the DTT-Docs image gets rebuilt and re-deployed to the DEV environment and can be accessed at: http://dtt-dev.internal.idlab.org:8080
+### 1 - Running locally on you workstation
 
-The DTT-Docs image gets deployed into the dtt-app K8s namespace, along with DTT-Frontend and DTT-Backend executable modules.
+(Inspired from [https://tutorial.docusaurus.io/docs/intro])
 
-## Folder Structure
+You need access to a local command-line, with an recent installation of [Node.js](https://nodejs.org/en/download/), i.e. [something more recent that Node.js 18.0](https://docusaurus.io/docs/installation)
 
-Actual documentation content consists of:
+Then, go to the root directory of your DTT-Docs git clone, and run the following commands:
 
-* mkdocs.yaml: This is the mkdocs configuration file. It mainly contains the navigation tree for our documentation.
-When adding a documentation page, the page must be added in here under the appropriate right section.
-
-* docs/index.md: This is the HOME page for the documentation
-
-* docs/userguide/: All markdown files related to the User Guide
-
-* docs/developerguide/: All markdown files related to the Developer Guide
-
-* docs/images/: All images used in the documentation
-
-## Adding a Documentation Page
- 
-
-* Create a new markdown file in the appropriate /docs subfolder
-
-* Add a reference to it in the mkdocs.yaml nav section
-
-* Test you changes locally (see how below)
-
-* If needed, add a link to the new page in the Frontend application (see how below)
-
- 
-
-### Deleting a Documentation Page
-
-Simply delete the markdown file and remove the reference to that page in the mkdocs.yaml nav section.
-
- 
-
-## Testing Changes Locally
-
-1- Make sure you have a virtual environment setup under your DTT-Docs folder
-```
-	python3 -m venv venv
-	. venv/bin/activate
-```
-2- Install dependencies
-
-```
-    pip install --upgrade pip
-    pip install -r requirements.txt
+```bash
+### >>> First time only <<< ###
+npm install
+# Variables in .env.sample file could be customised
+# but this is not necessary for local-only testing
+# Note that the `build` step below will fail if the relevant
+# environment variables are not set
+source .env.sample
+# Linux, WSL or MacOS command-line example
+npm run build && npm run start
 ```
 
-3- Run MKDocs locally:
+If everything goes well, your terminal should display:
 
+```bash
+(...)
+[SUCCESS] Serving "build" directory at: http://localhost:3000/
 ```
-    mkdocs serve
-```
-4 - Check your changes in your browser at http://localhost:8080
 
- 
+And if everything goes even better, your favorite web browser should open the rendered version of you modifications.
 
-### Environment variable: DTT_DOCS_URL
+### 2 - Testing this directly on the documentation staging web site
 
-If you are running DTT-Frontend locally, and want to test local documentation changes, make sure that mkdocs serve is running and set the DTT_DOCS_URL to http://localhost:8080 in your .env file.
+#### a The _I want to be a team player_ way
 
-In file .env (in DTT-Frontend)
-```
-    DTT_DOCS_URL=http://localhost:8080
-```
- 
+1. You need to clone this repository
+2. You then need to create a branch, preferably directly from the [jira issue](https://dtlab-labcn.atlassian.net/jira/software/projects/DTT/boards/16) itself
+3. Do the required work, and create a pull request, which will at least trigger a test build for your branch each time you push a new commit to your working branch
+4. Merge the pull request to the **`main`** branch **NOT** ~~`gh-pages`~~. This is going to automatically update the `gh-pages` branch, if the automatic action is successful
 
+#### b The _YOLO_ way
+
+1. You need to clone this repository
+2. Checkout the `main` branch, and directly push commits to it. It's just the staging site, after all
+3. Be prepared to deal with possible team players complaints, merge, etc.
+
+## Updating the production documentation
+
+⚠️ check with Bruno for the fist time, this has not been tested yet ⚠️
+
+Once the `main` branch is OK in this staging repository, create a pull request going directly to the `DTT-Docs` repository.

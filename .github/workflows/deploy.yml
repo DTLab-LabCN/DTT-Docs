@@ -1,0 +1,64 @@
+name: Deploy to GitHub Pages
+
+# Review gh actions docs if you want to further define triggers, paths, etc
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DTT_DOCS_URL: ${{ vars.DTT_DOCS_URL }}
+  DTT_DOCS_BASE_PATH: ${{ vars.DTT_DOCS_BASE_PATH }}
+  ORGANIZATION_NAME: ${{ github.repository_owner }}
+  PROJECT_NAME: ${{ github.event.repository.name }}
+
+jobs:
+  build:
+    name: Building the documentation static web site with docusaurus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        # We also create the CNAME file, this is useless in staging,
+        # but required in production.
+        # It is created temporarily in the static/ folder, because
+        # docusaurus will copy it to /build
+        run: |
+          echo "$DTT_DOCS_URL" | cut -f 3 -d/ | tee static/CNAME
+          npm run build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write # to deploy to Pages
+      id-token: write # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,3 +1,0 @@
-# Getting Started
-
-Content here

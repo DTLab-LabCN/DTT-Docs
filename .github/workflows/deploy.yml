@@ -29,6 +29,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Remove excluded PATHs for build
+        run: .github/workflows/excluded-paths.sh
+
       - name: Build website
         # We also create the CNAME file, this is useless in staging,
         # but required in production.

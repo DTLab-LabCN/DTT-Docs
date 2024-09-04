@@ -17,7 +17,7 @@ else
     echo "No path are excluded from this build, DTT_DOCS_EXCLUDED_PATH is absent or empty"
 fi
 
-for excluded_path in ${DTT_DOCS_EXCLUDED_PATH/:/ }; do
+for excluded_path in ${DTT_DOCS_EXCLUDED_PATH//:/ }; do
   echo "Removing \"docs/${excluded_path}\" from current build"
-  ( set -x; rm -rf "docs/${excluded_path}" )
+  ( set -x; rm --recursive --force --verbose "docs/${excluded_path}" )
 done

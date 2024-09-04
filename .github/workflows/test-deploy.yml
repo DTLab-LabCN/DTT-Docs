@@ -12,6 +12,7 @@ on:
 env:
   DTT_DOCS_URL: ${{ vars.DTT_DOCS_URL }}
   DTT_DOCS_BASE_PATH: ${{ vars.DTT_DOCS_BASE_PATH }}
+  DTT_DOCS_EXCLUDED_PATH: ${{ vars.DTT_DOCS_EXCLUDED_PATH }}
   ORGANIZATION_NAME: ${{ github.repository_owner }}
   PROJECT_NAME: ${{ github.event.repository.name }}
 
@@ -31,9 +32,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # - name: list environment variables
-      #   run: |
-      #     env && exit 1
+      - name: Remove excluded PATHs for build
+        run: .github/workflows/excluded-paths.sh
 
       - name: Test build website
         # We also create the CNAME file, this is useless in staging,

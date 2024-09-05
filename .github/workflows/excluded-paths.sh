@@ -1,8 +1,6 @@
 #! /usr/bin/env bash
 set -e
-
-# Note: actions always run at the root of the repository
-
+# Note: actions scripts are always run at the root of the repository
 
 if [ "$DTT_DOCS_EXCLUDED_PATH" != "" ]; then
   echo "Excluded PATHS in DTT_DOCS_EXCLUDED_PATH are \"$DTT_DOCS_EXCLUDED_PATH\""

@@ -29,6 +29,6 @@ Here are some of the DID methods most actively used and discussed by the communi
 | did:indy | [https://github.com/hyperledger/indy-did-method](https://github.com/hyperledger/indy-did-method) |    |
 | did:key | [https://w3c-ccg.github.io/did-method-key](https://w3c-ccg.github.io/did-method-key) | The did:key Method v0.7 |
 | did:peer | [https://identity.foundation/peer-did-method-spec](https://identity.foundation/peer-did-method-spec) | Peer DID Method Specification |
-| did:tdw | [https://bcgov.github.io/trustdidweb](https://bcgov.github.io/trustdidweb) | Trust DID Web - The did:tdw DID Method |
+| did:tdw | [https://identity.foundation/trustdidweb/](https://identity.foundation/trustdidweb/) | Trust DID Web - The did:tdw DID Method |
 | did:web | [https://w3c-ccg.github.io/did-method-web](https://w3c-ccg.github.io/did-method-web) | Unofficial draft authored by the [W3C Credentials Community Group](https://www.w3.org/community/credentials/). |
-| did:x509 | [ttps://github.com/microsoft/did-x509](ttps://github.com/microsoft/did-x509) | DRAFT: did:x509 Decentralized Identifier Method Specification |
+| did:x509 | [https://github.com/microsoft/did-x509](https://github.com/microsoft/did-x509) | DRAFT: did:x509 Decentralized Identifier Method Specification |

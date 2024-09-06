@@ -14,5 +14,5 @@ To get started, enter the URL representing a DID, and click on **Resolve DID**.
 Here are a few to get you started!
 
 >`did:cheqd:testnet:55dbc8bf-fba3-4117-855c-1e0dc1d3bb47`
-> `did:ebsi:zkC6cUFUs3FiRp2xedNwih2`
-> `did:indy:indicio:demo:KKyAeG7woJMV6MhhAREVKp`
+>`did:ebsi:zkC6cUFUs3FiRp2xedNwih2`
+>`did:indy:indicio:demo:KKyAeG7woJMV6MhhAREVKp`

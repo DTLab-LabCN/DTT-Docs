@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What are DIDs? {#what-are-dids}
 
-Decentralized identifiers (DID) are unique and persistent identifiers that do not rely on any single centralized or deferated registration authority. They can refer to any subject (person, organization, thing, etc).
+Decentralized identifiers (DID) are unique and persistent identifiers that do not rely on any single centralized authority. They can refer to any subject (person, organization, thing, etc).
 
 ## What is their role / how are they being used? {#what-is-their-role-how-are-they-being-used}
 

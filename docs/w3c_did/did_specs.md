@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Standards and specifications for DID methods
 
-Several working groups are collaborating towards the standardisation and adoption of DIDs, to enable the creation, resolution, and discovery of deventralized identifiers and names across decentralized digital credentials and identity ecosystems. They are anchoring their work on the W3C DID Core recommendation ("Standard"), augmenting it with more implementation focused guidelines and recommendations to use DIDs, and with additional requirements that are DID-method specific
+Several working groups are collaborating towards the standardisation and adoption of DIDs, to enable the creation, resolution, and discovery of decentralized identifiers and names across decentralized digital credentials and identity ecosystems. They are anchoring their work on the W3C DID Core recommendation ("Standard"), augmenting it with more implementation focused guidelines and recommendations to use DIDs, and with additional requirements that are DID-method specific.
 
 ## W3C DID core specification {#w3c-did-core-specification}
 

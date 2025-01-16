@@ -78,7 +78,7 @@ Now, the gist of putting the documentation in production is:
 
 Once the `main` branch is OK in this staging repository, create a pull request going directly to the `DTT-Docs` repository.
 
-### 1- Creating a Pull Request from the Stating repository to the Production repository
+### 1- Creating a Pull Request from the Staging repository to the Production repository
 
 - Go to [the main branch of the staging repository](https://github.com/DTLab-LabCN/DTT-Docs-staging)
 - If you did everything right, under the branches pull-down list, there should be box saying:  

@@ -4,6 +4,6 @@ sidebar_position: 3
 
 # How can I contribute to DTT?
 
-We work on a variety of projects in the digital credential space that require different skill sets and expertise. We look to collaborators to contribute to DTLab projects, to ensure we have the right breadth and depth when we need it. Collaborators may be DTLab any government, organization, or individual. DTLab welcomes everyone in collaborating with us on a project.
+DTT is currently being developed by DTLab and its partners. We are currently considering open-sourcing some or all of its components to better server the community.
 
 If you are interested in trying out DTT, have feedback, or suggestions for us, please [Contact us!](mailto:support@dtlab-labcn.org)

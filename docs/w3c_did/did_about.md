@@ -17,5 +17,5 @@ More information on the godiddy resolver service can be found [here](https://doc
   * [W3C DID Core Recommendation 1.0](https://www.w3.org/TR/did-core/)
   
 * Get involved:
-  * [W3C DID Working Group](https://www.w3.org/2019/did-wg/)
+  * [W3C Decentralized Identifier Working Group](https://www.w3.org/groups/wg/did/)
   * [DIF Identifiers & Discovery Working Group](https://github.com/decentralized-identity/identifiers-discovery/)

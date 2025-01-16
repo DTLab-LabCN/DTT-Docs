@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Please complete the access request form on the [DTT landing page](https://dtt.dtlab-labcn.app/) or contact [support@dtlab-labcn.org](mailto:support@dtlab-labcn.org) if you don't have a user account for DTT.
 
-To get started, enter the URL representing a DID, and click on **Resolve DID**.
+To get started, enter the URL representing a DID, and click on **Resolve DID URL**.
 
 ## Need examples to try it out?
 

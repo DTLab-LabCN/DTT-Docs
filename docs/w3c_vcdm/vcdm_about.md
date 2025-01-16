@@ -1,10 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 4
 ---
 
 # About the W3C VCDM test suite
-
-**_TODO_**: explain where this version of the test suite comes from, where the repo is, and how it’s configured
 
 ## Additional resources
 

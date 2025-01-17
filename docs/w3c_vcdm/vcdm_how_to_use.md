@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # How to use this test suite
 
-The purpose of this test suite is to test an issued Verifiable Credential for conformance with the VC data model 1.1 or 2.0 specifications.
+The purpose of this test suite is to test an issued Verifiable Credential for conformance with the VC data model [1.1](https://www.w3.org/TR/vc-data-model/) or [2.0](https://www.w3.org/TR/vc-data-model-2.0/) specifications.
 Simply paste a valid JSON payload and click on **Validate JSON**. This will bring you to a **Credential Summary** screen with a visual representation of the parsed and validated payload. Click on **See Test Results** to get access to the full conformance test results.
 
 ## Verifiable Presentations {#verifiable_presentations}

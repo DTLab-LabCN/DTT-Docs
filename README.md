@@ -13,33 +13,29 @@ Now, if you really want to get a preview of the end product insted of a single p
 
 ### 1 - Running locally on you workstation
 
-(Inspired from [https://tutorial.docusaurus.io/docs/intro])
+(Inspired from [https://tutorial.docusaurus.io/docs/intro]), should run on linux, WSL, and MacOS X.
+
+**Note**: running locally has the advantage of having your modification appear in near-real-time in the navigator
+instance that automatically opened by `start-local.sh`, or any modern navigator pointed to your [local instance http://localhost:3000/DTT-Docs-staging/](http://localhost:3000/DTT-Docs-staging/).
 
 You need access to a local command-line, with an recent installation of [Node.js](https://nodejs.org/en/download/), i.e. [something more recent that Node.js 18.0](https://docusaurus.io/docs/installation)
 
-Then, go to the root directory of your DTT-Docs git clone, and run the following commands:
+Then, go to the root directory of your DTT-Docs git clone, and run the following command:
 
 ```bash
-### >>> First time only <<< ###
-npm install
-# Variables in .env.sample file could be customised
-# but this is not necessary for local-only testing
-# Note that the `build` step below will fail if the relevant
-# environment variables are not set
-source .env.sample
-# Linux, WSL or MacOS command-line example
-npm run build && npm run start
+./start-local.sh
 ```
 
 If everything goes well, your terminal should display:
 
 ```bash
 (...)
-[SUCCESS] Serving "build" directory at: http://localhost:3000/
+[SUCCESS] Docusaurus website is running at: http://localhost:3000/DTT-Docs-staging/
 (...)
 ```
 
-And if everything goes even better, your favorite web browser should open the rendered version of you modifications.
+And if everything goes even better, your favorite web browser should open the rendered version of you modifications, updated in near-real time as explained above.
+
 
 ### 2 - Testing this directly on the documentation staging web site
 

@@ -29,7 +29,7 @@ By default, DTT will treat these properties as if they were required, which will
 
 | Option name | Data model reference | Explanation |
 | ----------- | -------------------- | ----------- |
-| `require_proof` | [VCDM 2.0 ch. 4.12](https://www.w3.org/TR/vc-data-model-2.0/#securing-mechanisms)| The specication recognizes two classes of securing mechanismes, including *enveloping proofs*, making this *embedded proof* property optional |
+| `require_proof` | [VCDM 2.0 ch. 4.12](https://www.w3.org/TR/vc-data-model-2.0/#securing-mechanisms)| The specification recognizes two classes of securing mechanismes, including *enveloping proofs*, making this *embedded proof* property optional |
 | `require_expiration_date` | [VCDM 1.1 ch. 4.8](https://www.w3.org/TR/vc-data-model/#expiration) | Note that this has been replaced by the `valid_until` property in v2.0 |
 | `require_credential_status` | [VCDM 2.0 ch. 4.10](https://www.w3.org/TR/vc-data-model-2.0/#status) | The `credentialStatus` property can define one ore more status associated with the credential, including a *revocation* status, but it is optional. |
 | `require_holder` | [VCDM 2.0 ch. 4.13](https://www.w3.org/TR/vc-data-model-2.0/#verifiable-presentations) | A *verifiable presentation* can define a `holder`, which can be a key part of the validation process for a *Verifier*, but is an optional property. |

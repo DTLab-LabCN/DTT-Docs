@@ -4,13 +4,13 @@ sidebar_position: 2
 
 # Standards and specifications for DID methods
 
-Several working groups are collaborating towards the standardisation and adoption of DIDs, to enable the creation, resolution, and discovery of decentralized identifiers and names across decentralized digital credentials and identity ecosystems. They are anchoring their work on the W3C DID Core recommendation ("Standard"), augmenting it with more implementation focused guidelines and recommendations to use DIDs, and with additional requirements that are DID-method specific.
+Several working groups are collaborating towards the standardization and adoption of DIDs, to enable the creation, resolution, and discovery of decentralized identifiers and names across decentralized digital credentials and identity ecosystems. They are anchoring their work on the W3C DID Core recommendation ("Standard"), augmenting it with more implementation-focused guidelines and recommendations to use DIDs, and with additional requirements that are DID-method specific.
 
 ## W3C DID core specification {#w3c-did-core-specification}
 
 [Decentralized Identifiers (DIDs) v1.0](https://www.w3.org/TR/did-core/). This document specifies the DID syntax, a common data model, core properties, serialized representations, DID operations, and an explanation of the process of resolving DIDs to the resources that they represent.
 
-## Resolution of Decentralized identifiers (DIDs) {#resolution-of-decntralized-identifiers}
+## Resolution of Decentralized identifiers (DIDs) {#resolution-of-decentralized-identifiers}
 
 The [DID resolution draft report](https://w3c.github.io/did-resolution/) augments the DID core specification by defining common requirements, algorithms including their inputs and results, architectural options, and various considerations for the DID resolution and DID URL dereferencing processes.
 
@@ -19,10 +19,10 @@ Each DID method requires the implementation of a *driver* to enable implementati
 
 ## Method-specific specifications and best practices {#method-specific-specifications-and-best-practices}
 
-While all DID methods must conform to the W3C DID Core specification, different use cases and requirements have led to the creating of different and complementary DID methods. Some are fairly well defined and are used in production, whereas others are more experimental and not as completely defined yet.
+While all DID methods must conform to the W3C DID Core specification, different use cases and requirements have led to the creation of different and complementary DID methods. Some are fairly well defined and are used in production, whereas others are more experimental and not as completely defined yet.
 Defining how a DID and DID document are created, resolved, and managed on a specific blockchain or “target system” is the role of a DID method specification.
 
-Here are some of the DID methods most actively used and discussed by the community. For more information, please consult the [Decentralized Identifyer Extensions repository](https://w3c.github.io/did-extensions/).
+Here are some of the DID methods most actively used and discussed by the community. For more information, please consult the [Decentralized Identifier Extensions repository](https://w3c.github.io/did-extensions/).
 
 | DID method | Specification | Status |
 | ---------- | ------------- | ------ |

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What are DIDs? {#what-are-dids}
 
-Decentralized identifiers (DID) are unique and persistent identifiers that do not rely on any single centralized authority. They can refer to any subject (person, organization, thing, etc).
+Decentralized identifiers (DIDs) are unique and persistent identifiers that do not rely on any single centralized authority. They can refer to any subject (person, organization, thing, etc.).
 
 ## What is their role / how are they being used? {#what-is-their-role-how-are-they-being-used}
 
@@ -17,7 +17,7 @@ DIDs are *URIs* that associate a *DID subject* with a *DID document* allowing tr
 
 A DID is a simple text string consisting of three parts:
 
-1. the did URI scheme identifier
+1. the DID URI scheme identifier
 2. the identifier for the DID method
 3. the DID method-specific identifier.
 

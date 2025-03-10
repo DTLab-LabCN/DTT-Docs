@@ -13,7 +13,6 @@ To get started, enter the URL representing a DID, and click on **Resolve DID URL
 [https://dev.uniresolver.io/](https://dev.uniresolver.io/) and [https://godiddy.com/app/resolve](https://godiddy.com/app/resolve) provide a number of examples for a variety of DID methods.
 Here are a few to get you started!
 
->`did:cheqd:mainnet:Ps1ysXP2Ae6GBfxNhNQNKN`\
 >`did:ebsi:zxE9ucTwx5V7Aean5Kj6Lz3`\
 >`did:ethr:0x1:0x3b0BC51Ab9De1e5B7B6E34E5b960285805C41736`\
 >`did:kscirc:k2xxMB9tYCPwg3pmCtGwHjEjwiRimVFhY8EevKMNu7mN9igGvYC`
@@ -21,10 +20,11 @@ Here are a few to get you started!
 ## Using the optional validation options {#using_the_options}
 
 The DID resolver supports various advanced resolution features. They are defined in the [did-spec-extensions](https://github.com/decentralized-identity/did-spec-extensions?tab=readme-ov-file#extension-resolution-options). If you do not want to see those potential warnings in your test report, simply change the relevant option(s) from `true` to `false` and click on **Set test profile** to save your choices before clicking on **Resolve DID URL**.
+Please note that some of these features are experimental!
 
 | Option name                    | DTT DID test                      | Explanation                                                                                                                                                                |
 | ------------------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `checkValidDidDocument`        | \#1 Valid DID Document Check      | Checks if the DID document **conforms with the W3C DID v1.0 specification**.                                                                                              |
+| `checkValidDidDocument`        | \#1 Valid DID Document Check      | Checks if the DID document **conforms with the W3C DID v1.0 specification**. This validation is performed by [DID Lint](https://didlint.ownyourdata.eu/validate)           |
 | `checkMethod`                  | \#2 Allowed DID Method Check      | Checks if the DID method is not allowed, based on an allowlist and denylist.                                                                                               |
 | `checkVerificationMethodType`  | \#3 Allowed Verification Method Type Check | Checks if the DID document contains a verification method with a type that is not allowed, based on an allowlist and denylist.                                               |
 | `checkCertificate`             | \#4 Certificate Chain Validation Check | Checks if a DID document contains a key that cannot be traced back to a trusted certificate authority, based on an allowlist and denylist.                                     |

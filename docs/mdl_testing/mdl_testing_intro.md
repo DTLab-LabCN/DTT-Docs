@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction to mDL testing with DTT {#introduction-to-mdl-testing-with-dtt}
+# Introduction to mDL testing with DTT
 
 With this experimental test suite, you can test your mDL mobile app by performing a data retrieval from Chrome over BLE (18013-5).
 Note: the test launches in a new tab, and the test results are not currently integrated with the rest of DTT.
